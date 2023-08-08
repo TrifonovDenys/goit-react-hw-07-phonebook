@@ -1,4 +1,4 @@
-import { deleteContact } from 'redux/contactsSlice';
+import { deleteContact } from 'redux/operations';
 import css from '../ContactList/ContactList.module.css'
 import { useDispatch } from 'react-redux';
 const Contact = ({ contact }) => {
@@ -7,7 +7,7 @@ const dispatch = useDispatch()
   return (
     <>
       <p className={css.text}> {contact.name}:
-        <span>{contact.number}</span>
+        <span>{contact.phone}</span>
       </p>
       <button onClick={handleDelete}>delete</button>
     </>
